@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <title>Contact - Origin Architects</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        .content-contact div div p.error {
+            font-size: 10px;
+            color: red;
+            margin: 0;
+            margin-top: -15px;
+            padding-left: 10px;
+            padding-bottom: 8px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -43,17 +55,20 @@
                 <div class="content-contact">
                     <div>
                         <div>
-                            <h3>Contact</h3>
+                            <h3>Contact Us</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam voluptate quo dolore ex ducimus perspiciatis quis id reprehenderit laboriosam, in ad, aliquid adipisci quae, reiciendis ipsa est. Atque, minima deleniti? Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Eveniet similique est dignissimos. Veniam nemo excepturi soluta! Ab alias molestias commodi eaque doloribus nemo, tenetur numquam repudiandae consectetur id, beatae corporis?</a>.
                             </p>
                             <form action="index.html">
                                 <h4>Send Us A Quick Message</h4>
-                                <input type="text" value="Name *" onblur="this.value=!this.value?'Name *':this.value;" onfocus="this.select()" onclick="this.value='';">
-                                <input type="text" value="Email Address *" onblur="this.value=!this.value?'Email Address *':this.value;" onfocus="this.select()" onclick="this.value='';">
-                                <input type="text" value="Phone Number" onblur="this.value=!this.value?'Phone Number':this.value;" onfocus="this.select()" onclick="this.value='';">
-                                <textarea name="comment" id="comment" cols="30" rows="10" onblur="this.value=!this.value?'Your Comment':this.value;" onfocus="this.select()" onclick="this.value='';">Your Comment</textarea>
+                                <input type="text" placeholder="Name *" onfocus="this.select()" required>
+
+                                <input id="email" type="text" placeholder="Email *" onfocus="this.select()" required>
+
+                                <input id="phone" type="text" placeholder="Phone Number" onfocus="this.select()" required>
+
+                                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Comment" onfocus="this.select()" onclick="this.value='';">Your Comment</textarea>
                                 <input type="submit" class="submit" value="Submit Message">
                             </form>
                         </div>
@@ -100,5 +115,7 @@
         </div>
     </div>
 </body>
+
+<script src="./js/script.js"></script>
 
 </html>
